@@ -44,3 +44,21 @@ console.log(todosMasDe1000);
 // 10.
 const contieneCampera = nombresDeProductos.includes("Campera");
 console.log(contieneCampera);
+// Parte 4
+// 11.
+const productosOrdenadosPorPrecio = productos.slice().sort((a, b) => a.precio - b.precio);
+productosOrdenadosPorPrecio.forEach(producto => {
+    console.log(`Producto: ${producto.nombre} - Precio: $${producto.precio}`);
+});
+// 12.
+const mensajes = productos.map(producto => `El producto ${producto.nombre} cuesta $${producto.precio} y pertenece a la categoria ${producto.categoria}.`);
+console.log(mensajes);
+// 13.
+const nuevosProductos = [
+    { id: 6, nombre: "Botas", precio: 2200, categoria: "Calzado" },
+    { id: 7, nombre: "Bufanda", precio: 1800, categoria: "Accesorios" }
+]
+const todosLosProductos = [...productos, ...nuevosProductos];
+todosLosProductos.forEach(producto => {
+    console.log(`ID: ${producto.id} - Producto: ${producto.nombre} - Precio: $${producto.precio} - Categoría: ${producto.categoria}`);
+});
