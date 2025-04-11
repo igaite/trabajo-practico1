@@ -34,3 +34,13 @@ productosCaros.forEach(producto => {
 // 7.
 const gorra = productos.find(producto => producto.nombre === "Gorra");
 console.log(gorra);
+// Parte 3
+// 8.
+const hayProductosCaros = productos.some(producto => producto.precio > 10000);
+console.log(hayProductosCaros);
+// 9.
+const todosMasDe1000 = productos.every(producto => producto.precio > 1000);
+console.log(todosMasDe1000);
+// 10.
+const contieneCampera = nombresDeProductos.includes("Campera");
+console.log(contieneCampera);
